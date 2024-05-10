@@ -100,7 +100,7 @@ connect to the cluster
 aws eks --region $region update-kubeconfig --name $cluster_name
 ```
 
-check the csi pods are eplpyed in the kube-system namespace 
+check the csi pods are deplpyed in the kube-system namespace 
 ```
 kubectl get pods -n kube-system
 ```
@@ -189,14 +189,16 @@ first-snapshot   true         ebs-claim                           4Gi           
 
 # Conclusion 
 
-You are now ready to go with a csi storage on EKS that support snapshot. 
-
 Delete this resources only useful for the test. 
 ```
 kubectl delete pod app
 kubectl delete pvc ebs-claim
 kubectl delete volumesnapshot first-snapshot
 ```
+
+You now have an EKS cluster with a csi storage that support snapshot you can 
+move to [the second step](./pre-req-2-network.md) for the ingress controller. 
+
 
 
 
