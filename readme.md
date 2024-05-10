@@ -31,9 +31,9 @@ and we'll need them again for the rest of this tutorial.
 cluster_name=eks-mcourcy
 region=eu-west-3
 domain="mydomain.com"
+
 account_id=$(aws sts get-caller-identity --query Account --output text)
-cluster_name_=$(echo "eks-mcourcy" | tr '-' '_')
-role_name="${cluster_name_}_AmazonEKS_EBS_CSI_DriverRole"
+cluster_name_=$(echo $cluster_name | tr '-' '_')
 subdomain="${cluster_name}.${domain}"
 ```
 
