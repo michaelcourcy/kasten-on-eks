@@ -86,7 +86,7 @@ ingress:
   urlPath: k10
   annotations: 
     kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt
+    cert-manager.io/cluster-issuer: letsencrypt-prod
   tls:
     enabled: true 
     secretName: kasten-gateway-tls-secret
